@@ -2,7 +2,7 @@
   "name": "library-app-vue",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port=8080",
     "build": "vite build",
     "preview": "vite preview --port 5050"
   },
@@ -13,6 +13,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24",
     "vite": "^2.9.5"
   }
 }
