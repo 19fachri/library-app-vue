@@ -4,17 +4,20 @@
       <h1 class="uppercase text-2xl font-extrabold">Library App</h1>
     </div>
     <ul class="w-full mt-10 text-bgPrimary">
-      <li class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
+      <!-- <li @click="handleDashboard" class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
         Dashboard
-      </li>
-      <li class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
+      </li> -->
+      <li @click="handleBook" class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
         Books
       </li>
-      <li class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
+      <!-- <li class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
         Members
       </li>
       <li class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
         Status
+      </li> -->
+      <li @click="handleLogout" class="pl-10 py-3 hover:bg-bgPrimary hover:text-bgSecondary">
+        Logout
       </li>
       
     </ul>
@@ -22,8 +25,23 @@
 </template>
 
 <script>
+import { mapActions } from 'pinia'
+import { useUserStore } from '../stores/user'
 export default {
-
+  name:"sideBar",
+  methods: {
+    ...mapActions(useUserStore, ["removeUserData"]),
+    handleDashboard(){
+      this.$router.push({name: "dashboardPage"})
+    },
+    handleBook(){
+      this.$router.push({name: "booksPage"})
+    },
+    handleLogout(){
+      this.removeUserData()
+      this.$router.push({name: "loginPage"})
+    }
+  }
 }
 </script>
 
