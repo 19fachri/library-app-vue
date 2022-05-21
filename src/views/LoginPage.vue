@@ -22,8 +22,8 @@
           </div>
         </form>
       </div>
-      <div>
-        <button @click="handleClickSignIn">Or login with your google account</button>
+      <div class="mt-4">
+        <h3>Or login with your <a class="bg-bgPrimary text-bgSecondary px-2 py-1 rounded-md" href="#" @click.prevent="handleClickSignIn">google</a>  account</h3>
       </div>
     </div>
   </div>

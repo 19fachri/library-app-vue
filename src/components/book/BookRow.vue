@@ -1,10 +1,9 @@
 <template>
   <tr class="border-b h-16">
-    <td class="pl-6">1</td>
-    <td class="pl-6">{{item.title}}</td>
     <td class="pl-6">
       <img :src="item.imageUrl" :alt="item.title" class="w-20">
     </td>
+    <td class="pl-6">{{item.title}}</td>
     <td class="pl-6">{{item.author}}</td>
     <td class="pl-6">{{item.Category.name}}</td>
     <td class="pl-6">{{releaseDate}}</td>

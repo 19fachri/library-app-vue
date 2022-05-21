@@ -4,9 +4,8 @@
     <table class="w-full text-primary">
       <thead>
         <tr class="border-y-2 h-16 text-lg font-bold">
-          <th>No</th>
-          <th>Title</th>
           <th>Image Url</th>
+          <th>Title</th>
           <th>Author</th>
           <th>Category</th>
           <th>Relase Date</th>
